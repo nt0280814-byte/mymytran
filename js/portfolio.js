@@ -72,14 +72,26 @@ document.addEventListener("DOMContentLoaded", () => {
         <h2>${p.title}</h2>
         <p class="d-sub">${p.subtitle}</p>
         <div class="d-img"><img src="${p.img}" alt="${p.title}"></div>
+        ${p.gallery && p.gallery.length ? `<div class="d-gallery">${p.gallery.map((src, i) => `<img src="${src}" alt="${p.title} — photo ${i + 2}" loading="lazy">`).join("")}</div>` : ""}
         ${p.stat ? `<div class="d-stat"><span class="v">${p.stat.value}</span><span class="l">${p.stat.label}</span></div>` : ""}
         <p class="d-body">${p.body}</p>
         ${p.link ? `<a class="btn btn-solid d-link" href="${p.link.href}" target="_blank" rel="noopener">${p.link.label}</a>` : ""}
       </div>`;
     overlay.classList.add("is-open");
     overlay.querySelector(".close-detail").addEventListener("click", closeDetail);
+    overlay.querySelectorAll(".d-gallery img").forEach((thumb) => {
+      thumb.addEventListener("click", () => openLightbox(thumb.src, thumb.alt));
+    });
     document.body.style.overflow = "hidden";
     history.replaceState(null, "", `${location.pathname}#${id}`);
+  }
+
+  function openLightbox(src, alt) {
+    const box = document.createElement("div");
+    box.className = "lightbox";
+    box.innerHTML = `<img src="${src}" alt="${alt}">`;
+    box.addEventListener("click", () => box.remove());
+    document.body.appendChild(box);
   }
 
   function closeDetail() {

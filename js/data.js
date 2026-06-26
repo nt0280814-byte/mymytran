@@ -1,7 +1,9 @@
 /* ============================================================
    Portfolio data — every project from the original 13 "daughter"
    pages + 4 category hubs, structured for the rebuilt single-page
-   portfolio (filter tabs + flip-card detail).
+   portfolio (filter tabs + flip-card detail). Each project now
+   carries a `gallery` array of real photos pulled from the source
+   site, in addition to its main card image.
    ============================================================ */
 
 const CHAPTERS = [
@@ -19,6 +21,10 @@ const PROJECTS = [
     title: "The Ancient Bricks and the Flowers of Identity",
     subtitle: "Legacy in Ink (2025) — Top 50 Nationwide",
     img: "https://static.wixstatic.com/media/2b7630_abc410123f6e4910818f52b5392b86e4~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_74287c9b2f044f6c935ad6ee83e60556~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_2fa2baf043a24856b8b344213de0e17d~mv2.png"
+    ],
     stat: { value: "Top 50", label: "of 15–25 yr-old writers, nationwide" },
     body: `Selected as one of the Top 50 in Legacy in Ink, a nationwide writing
     contest co-hosted by Nhà Xuất Bản Thế Giới and The Penlogue, gathering aspiring
@@ -32,6 +38,9 @@ const PROJECTS = [
     title: "The Last Wish",
     subtitle: "Khăn Quàng Đỏ Magazine — debut short story",
     img: "https://static.wixstatic.com/media/2b7630_9c377b6a12bb421fbb8f3f29e6bca8ed~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_dc07f51ca12d45d89755b66c15b45ba8~mv2.jpg"
+    ],
     stat: { value: "01", label: "first published story" },
     body: `A 15-year-old girl meets a robot identical to herself, capable of
     granting every wish. Her dreams come true one by one — except the last: to see
@@ -45,6 +54,7 @@ const PROJECTS = [
     title: "Unexpected Goodbye",
     subtitle: "Short story for Teachers' Day (2022)",
     img: "https://static.wixstatic.com/media/2b7630_9c377b6a12bb421fbb8f3f29e6bca8ed~mv2.jpg",
+    gallery: [],
     stat: { value: "20/11", label: "Vietnamese Teachers' Day contest" },
     body: `A heartfelt tribute to a late teacher, written for the 20/11 writing
     contest across Vinschool campuses — aimed not at winning, but at preserving the
@@ -58,6 +68,7 @@ const PROJECTS = [
     title: "A Part of Me Is Written in White Chalk…",
     subtitle: "Vinpress (2025) — Second Prize",
     img: "https://static.wixstatic.com/media/2b7630_169fb2f42e614f0b99fed4a3f3a94042~mv2.png",
+    gallery: [],
     stat: { value: "2nd", label: "prize" },
     body: `A reflective essay on how three teachers gently shaped emotional
     growth through years of vulnerability and self-doubt. Their words, presence,
@@ -73,6 +84,7 @@ const PROJECTS = [
     title: "17 Degrees Podcast",
     subtitle: "Creator & host — launched July 29, 2025",
     img: "https://static.wixstatic.com/media/2b7630_bfbb6d35b2b34c419c2784dd905b9faa~mv2.jpg",
+    gallery: [],
     stat: { value: "224", label: "total plays · 3 countries" },
     body: `A youth-led podcast where even the smallest stories deserve to be
     heard — self-reflection, creativity, and a touch of "I've been there too,"
@@ -87,6 +99,14 @@ const PROJECTS = [
     title: "Female Lead — Media Studies Music Video",
     subtitle: "Acting & on-set production",
     img: "https://static.wixstatic.com/media/2b7630_d5b41425cc5345de985d8fd7accd9201~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_b57f70916bbe4a2f98c2d24a255dc6b3~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_53e24289d9644f40b5357911133d1f0d~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_6ae8ce934a2b4a529536f8531821ad81~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_a3382e63e47a4ff780a78c6423bd8832~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_4caa6c49a3b24ce181a944e362c62d46~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_df5d4312bbaa4b3c8c9cc8f2ed865fbc~mv2.jpg"
+    ],
     stat: { value: "12th", label: "grade student film project" },
     body: `Invited to play the female lead in a music video created by 12th-grade
     students for their Media Studies course. Beyond acting, this meant learning the
@@ -99,6 +119,7 @@ const PROJECTS = [
     title: "Cửa Sổ Mở — Through the Window",
     subtitle: "Personal blog on Instagram & TikTok",
     img: "https://static.wixstatic.com/media/2b7630_849e6202eeaa4229be5df32be71dd286~mv2.jpg",
+    gallery: [],
     stat: { value: "words &", label: "humanity — the blog's theme" },
     body: `A personal storytelling space sharing reflections on books, films, and
     literature — blending reviews with personal insight to spark conversation. Still
@@ -112,6 +133,14 @@ const PROJECTS = [
     title: "Career Exploration Program",
     subtitle: "Thanh Niên Newspaper × University of Social Sciences & Humanities",
     img: "https://static.wixstatic.com/media/2b7630_5bc5f13721c94387aad2db954352b6fe~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_8ce1d6452110473b8536815069049107~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_7c6a3bdffac246eb81334c397b883ba5~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_db707e3f6b87450da432c1259bc358e9~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_77ec84a397434c61852f621c70925542~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_4b3de6ce69d0422b8327f05c531a9e8d~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_aaa5b56b731c41088587dbe6c005d52b~mv2.jpg"
+    ],
     stat: { value: "G11", label: "school-organized field program" },
     body: `Chose Media & Journalism for a grade-11 career exploration program. At
     USSH: workshops on media and communication, hosting, public speaking, and
@@ -125,6 +154,7 @@ const PROJECTS = [
     title: "All About Our Story",
     subtitle: "Meraki Blog Contest — Cyberbullying & Online Stalking",
     img: "https://static.wixstatic.com/media/2b7630_af7c2132966b4bf7920c795ec7c810a7~mv2.jpg",
+    gallery: [],
     stat: { value: "1st", label: "prize, secondary-school level" },
     body: `A video amplifying the voices of children silenced by fear,
     cyberbullying, and online stalking. As lead actress and narrator, also
@@ -140,6 +170,13 @@ const PROJECTS = [
     title: "Tinkle Project",
     subtitle: "Founder & Leader (2024) — 6-person team",
     img: "https://static.wixstatic.com/media/2b7630_01a0991c48734a3fa7c75c43ef60a333~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_ed9f46c7254941e68ef8231db90d3ea1~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_2ddb4cffd4ff45e8839ddafd19b3b195~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_a33fce13df594e0f8cc30dd15fa1b93e~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_c085bb15e7d645eca480d19e25f1182e~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_96962222d7cc48afac7fd8d27fd6aa69~mv2.jpg"
+    ],
     stat: { value: "3,000,000₫", label: "raised through Tinkle Bakery" },
     body: `A three-stage initiative for disadvantaged children. Stage 1 — Tinkle
     Bakery: built a bakery brand from scratch (recipes, packaging, logo) to fund the
@@ -154,6 +191,12 @@ const PROJECTS = [
     title: "Wellbeing Session",
     subtitle: "Co-host — a workshop on sensitivity",
     img: "https://static.wixstatic.com/media/2b7630_1fe9fbb98cda4a079ee6ece9e3aedf6a~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_abd0ecba6c264710ac3cd09878d635b9~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_1837f1249d474e82a8e45e8ca76503f1~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_79aaf6da6c1c4042921066bf76208cf6~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_fb702f584a644ba785b45af8174b18ed~mv2.jpg"
+    ],
     stat: { value: "5+ yrs", label: "co-hosted with a best friend" },
     body: `Built by two self-described sensitive people, for anyone who's felt
     sensitivity as isolating rather than a strength. Activities: a Word Cloud Game
@@ -167,6 +210,12 @@ const PROJECTS = [
     title: "My Sweet Orange Tree",
     subtitle: "Book-sharing session host — Lectio",
     img: "https://static.wixstatic.com/media/2b7630_9ea659fcd3f1440d98021c1b09c71448~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_b33a3fd9a63d45599dae05ad12d36510~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_d27159ccdc8642d78dc8027338db7387~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_c2ea2cc2d01f4215a62c397ac9ae1c28~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_c6e8fdccf4e3426a87f39312f45d4b54~mv2.jpg"
+    ],
     stat: { value: "01", label: "first time on stage, public speaking" },
     body: `Planned and hosted a session reflecting on Zézé's tender, painful
     childhood with guidance from Lectio's founding team. More than an event — it was
@@ -179,6 +228,13 @@ const PROJECTS = [
     title: "Lectio Reading Society",
     subtitle: "Content Team → Vice President (G10–G12)",
     img: "https://static.wixstatic.com/media/2b7630_921ca56d853546b6908ea6d43b55894e~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_aff3c8337e2243a1b17d82858b863267~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_0fba7ddc157c42c0b495b2f7979e93f9~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_f554fbddc77d460bbf6e958a0533a4bb~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_ba227b7b174e4cf4bcb771bc28845f88~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_f8ea1113cb6b4dc5a3ea1ce368bc982a~mv2.jpg"
+    ],
     stat: { value: "G10→12", label: "Content Team to Vice President" },
     body: `Joined in Grade 10 on the Content Team, contributing event ideas and
     hosting a solo book-sharing session. Entrusted as Vice President in Grade 11,
@@ -193,6 +249,7 @@ const PROJECTS = [
     title: "Gieo Mầm Sức Khỏe — Seeds of Health",
     subtitle: "Co-founder & Project Lead — 6-month project",
     img: "https://static.wixstatic.com/media/2b7630_f54eb103a82b4bc9b74c1fe9f95f3028~mv2.jpg",
+    gallery: [],
     stat: { value: "3", label: "original health comics written & illustrated" },
     body: `A six-month project (2024–25 to 2025–26) combining creativity and
     compassion. Stage 1 — fundraising ("Healthy Sip" drinks, "Portraits from the
@@ -207,13 +264,20 @@ const PROJECTS = [
     title: "Vinschool Social Activities Club",
     subtitle: "PR Department → Vice Head of PR",
     img: "https://static.wixstatic.com/media/2b7630_9d4c37cc44074e7eae8c48ce16268241~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_48c3f0064f194baf92695156601d95ca~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_fee393730cef4ed59332545dac403e60~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_21aa7505c1f640e095a80b1762f9c871~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_bc6cc486590b460eb0836ed028c6fd5c~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_1abfee6532824db6960b359c874463cb~mv2.jpg"
+    ],
     stat: { value: "6 mo", label: "to promotion as Vice Head of PR" },
     body: `"Leading Hands, Changing Lives." Joined PR in Grade 10, promoted to
     Vice Head of PR within six months. Managed social platforms, designed
     fundraising-event content, led a small PR team. Paused direct participation in
     Grade 12 to focus on personal projects, while continuing to mentor younger PR
-    members remotely. "Leadership is not only about taking charge, but inspiring
-    others to act with compassion."`,
+    members remotely. "Leadership is not only about taking charge but also about
+    inspiring others to act with compassion."`,
   },
   {
     id: "vinpsy",
@@ -221,6 +285,13 @@ const PROJECTS = [
     title: "Vinpsy — Psychology Club",
     subtitle: "Content Member → Head of Content",
     img: "https://static.wixstatic.com/media/2b7630_ffd4a5672c594ab7a655586bfb02d2cd~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_19c850e599b649a18e1d1b8ca79ec4f7~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_1163417992304c2f8fb41d8fb27fa9b6~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_24fee9e50a2944b698c58e2ae3e5c1f2~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_66e3e6dfc4f943a8aa61009d38535713~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_5a5ea287bf9b4106aecc2b8bee74300f~mv2.jpg"
+    ],
     stat: { value: "G10→12", label: "Content Member to Head of Content" },
     body: `"Where psychology becomes a safe space." Joined as a Content Member
     at the end of Grade 10, writing psychological articles, workshop content, and
@@ -234,6 +305,13 @@ const PROJECTS = [
     title: "Safe Space Booth",
     subtitle: "Initiative Leader — SEL research",
     img: "https://static.wixstatic.com/media/2b7630_9c065016cfb94732a07ae188bd003274~mv2.jpg",
+    gallery: [
+      "https://static.wixstatic.com/media/2b7630_7efcabe28e064e9b8fe6d69703d38c77~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_642cb7fdf53942708e6bf0785d1fa855~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_98736b6b81ab40fabc7bd41ddf7db4b2~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_00684e28e3c940b1b75ca104eb6e02fd~mv2.jpg",
+      "https://static.wixstatic.com/media/2b7630_45bb49eebd36433083b55052ea2ce8aa~mv2.jpg"
+    ],
     stat: { value: "Top 15", label: "schoolwide wellbeing initiative" },
     body: `A data-driven study of Social & Emotional Learning (SEL) competencies,
     built as an interactive booth instead of a traditional survey — combining
@@ -250,6 +328,7 @@ const PROJECTS = [
     title: "Vietnam Case Competition — Roll'd",
     subtitle: "Top 20 Finalist — Top 10% nationwide",
     img: "https://static.wixstatic.com/media/2b7630_9dd0dadd572e4a96bfefa670b2aa444b~mv2.png",
+    gallery: [],
     stat: { value: "Top 10%", label: "of all competing teams" },
     body: `Brief: how can Roll'd expand into Vietnam while keeping its identity and
     winning over Gen Z? Led Gen-Z behavioral research, co-designed the "Vietnamese
@@ -264,6 +343,7 @@ const PROJECTS = [
     title: "VietSoulBox",
     subtitle: "VNEC 2026 — phygital cultural gift box",
     img: "https://static.wixstatic.com/media/2b7630_fd1280725123401c912674525b860a4a~mv2.png",
+    gallery: [],
     stat: { value: "Web-AR", label: "+ AI multilingual guide" },
     body: `Brief: Vietnamese souvenirs that lack storytelling and fail to engage
     modern travelers. Co-developed a "phygital" gift box activated by Web-AR and QR

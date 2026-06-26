@@ -318,6 +318,29 @@ a:focus-visible, button:focus-visible, .filter-tab:focus-visible {
 .section-head h2 { font-size: clamp(2rem, 4vw, 2.8rem); margin-top: 16px; }
 .section-head p { color: var(--paper-text-dim); margin-top: 16px; font-size: 1.05rem; }
 
+/* ---------- photo strip (home, real photos) ---------- */
+.photo-strip {
+  display: flex;
+  gap: 14px;
+  overflow-x: auto;
+  padding: 10px 4px 24px;
+  scrollbar-width: thin;
+}
+.photo-strip img {
+  flex: 0 0 auto;
+  height: 220px;
+  width: auto;
+  border-radius: 10px;
+  border: 1px solid var(--line);
+  object-fit: cover;
+  box-shadow: 0 14px 30px rgba(0,0,0,.35);
+  transition: transform .3s var(--ease);
+}
+.photo-strip img:nth-child(even) { transform: rotate(1.4deg) translateY(6px); }
+.photo-strip img:nth-child(odd) { transform: rotate(-1.2deg); }
+.photo-strip img:hover { transform: scale(1.04) rotate(0deg); }
+@media (max-width: 600px) { .photo-strip img { height: 160px; } }
+
 /* ---------- chapter cards (home) ---------- */
 .chapter-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 18px; }
 @media (max-width: 980px) { .chapter-grid { grid-template-columns: repeat(2,1fr); } }
@@ -505,8 +528,25 @@ a:focus-visible, button:focus-visible, .filter-tab:focus-visible {
 .detail-page .d-thread { font-family: var(--font-mono); font-size: 0.74rem; letter-spacing: .12em; text-transform: uppercase; }
 .detail-page h2 { font-size: clamp(1.6rem, 3vw, 2.2rem); color: var(--ink-text); margin: 14px 0 6px; }
 .detail-page .d-sub { color: #6b6354; font-size: 0.98rem; margin-bottom: 22px; }
-.detail-page .d-img { border-radius: 10px; overflow: hidden; margin-bottom: 24px; aspect-ratio: 16/9; }
+.detail-page .d-img { border-radius: 10px; overflow: hidden; margin-bottom: 14px; aspect-ratio: 16/9; }
 .detail-page .d-img img { width: 100%; height: 100%; object-fit: cover; }
+.detail-page .d-gallery { display: grid; grid-template-columns: repeat(3, 1fr); gap: 8px; margin-bottom: 24px; }
+.detail-page .d-gallery img {
+  width: 100%; aspect-ratio: 1/1; object-fit: cover; border-radius: 8px;
+  cursor: zoom-in; transition: transform .25s var(--ease), opacity .25s;
+}
+.detail-page .d-gallery img:hover { transform: scale(1.04); opacity: .92; }
+@media (max-width: 600px) { .detail-page .d-gallery { grid-template-columns: repeat(3, 1fr); gap: 6px; } }
+
+.lightbox {
+  position: fixed; inset: 0; z-index: 500;
+  background: rgba(11,15,28,.92);
+  display: flex; align-items: center; justify-content: center;
+  padding: 30px; cursor: zoom-out;
+  animation: lightboxIn .2s var(--ease);
+}
+@keyframes lightboxIn { from { opacity: 0; } to { opacity: 1; } }
+.lightbox img { max-width: 100%; max-height: 100%; border-radius: 8px; box-shadow: 0 30px 80px rgba(0,0,0,.6); }
 .detail-page .d-stat {
   display: inline-flex; flex-direction: column; gap: 2px;
   border-left: 3px solid var(--coral); padding-left: 14px; margin-bottom: 22px;
